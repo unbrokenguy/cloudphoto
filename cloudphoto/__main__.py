@@ -80,7 +80,7 @@ class CloudPhotoApp:
             return self.list_command(params)
         elif command == self.Commands.HELP:
             return self.help_command(params)
-        print("Неправильная команда")
+        print("Ошибка! Неправильная команда")
 
     def get_command(self, command):
         if command == "upload":
@@ -91,7 +91,7 @@ class CloudPhotoApp:
             return self.Commands.LIST
         elif command == "help":
             return self.Commands.HELP
-        print("Неправильная команда")
+        print("Ошибка! Неправильная команда")
 
     def list_command(self, params):
         if params.get("-a"):
@@ -111,7 +111,11 @@ class CloudPhotoApp:
             print("Не был передан параметр '-a' или '-p'")
             return
         if not Path.is_dir(_path):
-            raise ValueError("Указанного каталока не существует.")
+            print("Ошибка! Указанного каталога не существует.")
+            return
+        if _album not in self.albums:
+            print("Ошибка! Указанного альбома не существует.")
+            return
         _path = _path / _album
         Path.mkdir(_path, exist_ok=True)
         data = self.provider.download_bucket(_album)
@@ -128,7 +132,8 @@ class CloudPhotoApp:
             print("Не был передан параметр '-a' или '-p'")
             return
         if not Path.is_dir(_path):
-            raise ValueError("Указанного каталока не существует.")
+            print("Ошибка! Указанного каталога не существует.")
+            return
         if _album not in self.albums:
             self.provider.create_album(_album)
         _photos = list(
