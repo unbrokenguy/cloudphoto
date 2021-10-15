@@ -11,7 +11,7 @@ with open('requirements.txt') as f:
 setup(
     name="CloudPhoto",
     description="Store albums in cloud",
-    long_description=(BASE_DIR / "readme.md").read_text(),
+    long_description="",
     long_description_content_type="text/markdown",
     version="0.0.1",
     packages=find_packages(),
