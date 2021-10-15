@@ -1,0 +1,10 @@
+setup.py
+CloudPhoto.egg-info/PKG-INFO
+CloudPhoto.egg-info/SOURCES.txt
+CloudPhoto.egg-info/dependency_links.txt
+CloudPhoto.egg-info/entry_points.txt
+CloudPhoto.egg-info/not-zip-safe
+CloudPhoto.egg-info/requires.txt
+CloudPhoto.egg-info/top_level.txt
+cloudphoto/__init__.py
+cloudphoto/__main__.py

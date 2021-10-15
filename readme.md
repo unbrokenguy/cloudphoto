@@ -10,7 +10,7 @@
 git clone https://github.com/unbrokenguy/cloudphoto.git
 #### Перейдите в папку с репозиторием и установите скрипт
 ```shell
-python setup.py install
+pip install -e .
 ```
 ## Настройка
 #### Добавьте в домашнюю директерию папку `.aws` с текстовым файлом без расширения `credentials`

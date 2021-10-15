@@ -146,7 +146,7 @@ class CloudPhotoApp:
 
     @property
     def albums(self):
-        return self.list_command({})
+        return self.provider.get_albums()
 
     def help_command(self, params):
         string = "CloudPhoto commands:\n"

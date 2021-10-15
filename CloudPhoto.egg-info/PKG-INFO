@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: CloudPhoto
+Version: 0.0.1
+Summary: Store albums in cloud
+Home-page: https://github.com/unbrokenguy/cloudphoto
+Author: Khaziev Bulat 11-806
+Author-email: khazievbulatphanzilovich@gmail.com
+License: MIT
+Download-URL: https://github.com/unbrokenguy/cloudphoto/archive/refs/heads/master.zip
+Description: # CloudPhoto - первое задение.
+        * [Установка](#установка)
+        * [Настройка](#настройка)
+        * [использование](#использование)
+        ## Установка
+        
+        #### Устанвите Python верссии 3.7 или выше.
+        #### Добавьте Python в PATH
+        #### Склонируйте этот репозиторий
+        git clone https://github.com/unbrokenguy/cloudphoto.git
+        #### Перейдите в папку с репозиторием и установите скрипт
+        ```shell
+        pip install -e .
+        ```
+        ## Настройка
+        #### Добавьте в домашнюю директерию папку `.aws` с текстовым файлом без расширения `credentials`
+        `.aws/credentials`
+        ```text
+        [default]
+            aws_access_key_id = <id>
+            aws_secret_access_key = <key>
+        ```
+        #### и файл `.aws/config` с регионом.
+        ```
+        [default]
+            region=ru-central1
+        ```
+        ## Использование
+        ## Чтобы узнать список доступных команд заупустите консольное приложение 
+        ```shell
+        cloudphoto help
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
