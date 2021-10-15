@@ -13,6 +13,7 @@ git clone https://github.com/unbrokenguy/cloudphoto.git
 pip install -e .
 ```
 ## Настройка
+#### Создайте статический ключ доступа для сервисного аккаунта с доступом в Yandex Object Storage.
 #### Добавьте в домашнюю директерию папку `.aws` с текстовым файлом без расширения `credentials`
 `.aws/credentials`
 ```text
